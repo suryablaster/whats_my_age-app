@@ -16,7 +16,11 @@ class MainActivity : AppCompatActivity() {
             val userDOB:Int = Integer.parseInt(dob.text.toString())
             val cuYear = Calendar.getInstance().get(Calendar.YEAR)
             val age = cuYear - userDOB
-            textView2.text = "your age is $age "
+            textView2.apply {
+                textView2.text = "your age is $age "
+                Toast.makeText(this@MainActivity, "toast", Toast.LENGTH_SHORT).show()
+            }
+
 
 
 
